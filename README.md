@@ -33,11 +33,14 @@ either on the branch comparison page (for example,
 example, [hotwire-example-live-preview][]), or the branch's `README.md` file
 (for example, [hotwire-example-live-preview][README]).
 
-To experiment with a branch on your own, clone the repository, check out the
-branch, execute its set up script, start the local server, then visit
+To experiment with a branch on your own, create the PostgreSQL user
+`hotwire_example_template`, clone the repository, check out the
+branch, edit the .env file and adjust at least the password for the 
+PostgreSQL, execute its set up script, start the local server, then visit
 <http://localhost:3000>:
 
 ```sh
+$EDITOR .env
 bin/setup
 bin/rails server
 open http://localhost:3000
